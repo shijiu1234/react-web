@@ -8,22 +8,24 @@
 import React from 'react';
 import View from 'ReactView';
 import StyleSheet from 'ReactStyleSheet';
+import autobind from 'autobind-decorator';
 
-let TabBarContents = React.createClass({
+class TabBarContents extends React.Component {
 
-  getInitialState() {
-    return {
-      hasBeenSelected: false
-    };
-  },
+  constructor(props) {
+    super(props);
 
-  componentWillMount() {
     if (this.props.selected) {
       this.setState({
         hasBeenSelected: true
       });
     }
-  },
+
+  }
+
+  state = {
+    hasBeenSelected: false
+  }
 
   componentWillReceiveProps(nextProps) {
     if (this.state.hasBeenSelected || nextProps.selected) {
@@ -31,7 +33,7 @@ let TabBarContents = React.createClass({
         hasBeenSelected: true
       });
     }
-  },
+  }
 
   render() {
 
@@ -58,8 +60,9 @@ let TabBarContents = React.createClass({
 
     return (tabContents);
   }
-});
 
+};
 
+autobind(TabBarContents);
 
 export default TabBarContents;
