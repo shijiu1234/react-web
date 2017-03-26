@@ -2,6 +2,8 @@
 
 # React Web [中文](https://github.com/taobaofed/react-web/blob/master/README-zh.md) [![npm version](https://badge.fury.io/js/react-web.svg)](http://badge.fury.io/js/react-web)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/yujiangshui/react-web.svg)](https://greenkeeper.io/)
+
 > A framework for building web apps with React Native compatible API.
 
 ## Examples
